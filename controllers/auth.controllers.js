@@ -1,8 +1,8 @@
-import connectToDatabase from '../../../database/mongodb.js';
-import User from '../../../models/user.model.js';
+import connectToDatabase from '../../../../database/mongodb.js';
+import User from '../../../../models/user.model.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { JWT_EXPIRES_IN, JWT_SECRET } from '../../../config/env.js';
+import { JWT_EXPIRES_IN, JWT_SECRET } from '../../../../config/env.js';
 import { json } from 'micro';
 
 export default async function handler(req, res) {
