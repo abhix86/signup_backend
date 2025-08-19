@@ -18,12 +18,11 @@ const app = express();
 import { PORT } from './config/env.js';
 
 
-
-
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cors({
+    origin: 'https://signupbackend.vercel.app/', // frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 
 app.use(express.json())
 app.use(express.urlencoded( { extended: false } ));
